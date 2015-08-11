@@ -8,7 +8,16 @@ class Api::TournamentsController < ApplicationController
   def create
   	tournament = Tournament.create tournament_params
   	render json: tournament, status: 201
-  	tournament.save
+  end
+
+  def destroy
+    tournament = Tournament.find_by(id: params[:id])
+    unless tournament
+      render json: {error: "tournament not found"}, status: 400
+    end
+    tournament.destroy
+    tournaments = Tournament.all
+    render json: tournaments, status: 200
   end
 
   private

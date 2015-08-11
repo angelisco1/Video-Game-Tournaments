@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Video Game Tournaments
 ======================
 
@@ -165,3 +166,6 @@ Remember that you have to use JavaScript and your API.
 So if the page is refreshing to do this task, you are doing it wrong!
 
 Good luck!
+=======
+# Video-Game-Tournaments
+>>>>>>> 0732dbc1fad8eb6b364ff328a432ae8901c3bda3
