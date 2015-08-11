@@ -19,7 +19,17 @@ function deleteTournament(event){
 	}
 
 	function showTournaments (tournaments) {
-	    location.reload();
+	    // location.reload();
+	    var html
+	    if (tournaments.length === 0) {
+	    	html = buildErrorHtml('Looks like there aren\'t any tournaments yet.')
+	    } else {
+	    	html = buildTourneyListHtml(tournaments)
+	    }
+	    $('.js-tourney-section').empty();
+	    $('.js-tourney-section').append(html);
+
+
 	}
 
 }
